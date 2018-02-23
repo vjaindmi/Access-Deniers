@@ -1,0 +1,46 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+        <ion-title><ion-icon name="contact" item-start large></ion-icon>Veera</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item (click)="openPage(homePage)">
+        Profile
+      </button>
+      <button ion-item (click)="closeMenu()">
+        Settings
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav id="nav" [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>
+      Smarttravel
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+
+<ion-content >
+  
+  
+    <div #map  id="map_canvas" style="height:90%"></div>
+    <button ion-button color="primary" (click)="Gotravel()">Start</button>
+</ion-content>
+
+
+
+   
+     
+
+ 
+

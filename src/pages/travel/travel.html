@@ -1,0 +1,263 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+        <ion-icon name="locate" item-start large></ion-icon> <ion-title>Veera</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item (click)="openPage(homePage)">
+        Profile
+      </button>
+      <button ion-item (click)="closeMenu()">
+        Settings
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>
+      Smarttravel
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content  >
+  
+  <ion-card>
+
+    
+      <ion-card-content>
+        <ion-item>
+          
+            <ion-icon name="locate" item-start large></ion-icon> <ion-input placeholder="from" type="text" value="Guindy"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    
+  
+    
+      <ion-card-content>
+        <ion-item>
+         
+            <ion-icon name="navigate" item-start large></ion-icon>  <ion-input placeholder="to" type="text" value="Ashok Pillar"></ion-input>
+        </ion-item>
+      </ion-card-content>
+
+      <button ion-button color="primary" icon-left (click)="getRouteDetail()">Check Route</button>
+    
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        Your Preferences
+      </ion-card-header>
+    
+      <ion-list>
+  
+    <ion-grid>
+
+      <ion-row>
+        <ion-col col-2><img class="pref_logo" src="assets/imgs/economy.png"></ion-col>
+        <ion-col col-2><img class="pref_logo" src="assets/imgs/fast.png"></ion-col>
+        <ion-col col-2><img class="pref_logo" src="assets/imgs/safety.png"></ion-col>
+      </ion-row>
+    </ion-grid>
+      </ion-list></ion-card>
+      
+
+          <ion-card>
+              <ion-card-header>
+                  Transport Options
+                </ion-card-header>
+              <ion-card>
+                 
+                      
+                      <ion-card-header>
+                          Walk
+                        </ion-card-header>
+            
+                      
+                        <ion-item>
+                            <ion-icon name="walk" item-start large></ion-icon>
+                          <h2>Healthy!</h2>
+                          <p>You may burn 1500 calories </p>
+                        </ion-item>
+                      
+            
+                      
+                        <ion-item>
+                          <span item-left>45 min</span>
+                          <span item-left>(2.6 mi)</span>
+             
+                        </ion-item>
+                      
+                      </ion-card>
+                                  <ion-card>
+                                      
+                                      <ion-card-header>
+                                          Cycle
+                                        </ion-card-header>
+                            
+                                      
+                                        <ion-item>
+                                            <ion-icon name="bicycle" item-start large></ion-icon>
+                                          <h2>Healthy!</h2>
+                                          <p>You may burn 1000 calories </p>
+                                        </ion-item>
+                                      
+            
+                                      
+                                        <ion-item>
+                                          <span item-left>18 min</span>
+                                          <span item-left>(2.6 mi)</span>
+                             
+                                        </ion-item>
+                                      
+                                      </ion-card>
+                                      <ion-card>
+                  <ion-card-header>
+                      Driving
+                    </ion-card-header>
+        
+                  
+                    <ion-item>
+                       
+                        <ion-icon name="car" item-start large></ion-icon>
+                      <h2>Economy!</h2>
+                      <p>You need XXX Rs to buy petrol  </p>
+                    </ion-item>
+                  
+        
+                  
+                    <ion-item>
+                      <span item-left>5 min</span>
+                      <span item-left>(2.6 mi)</span>
+         
+                    </ion-item>
+                  
+                  </ion-card>
+                  <ion-card>
+                      
+                      <ion-card-header>
+                          Public Transport
+                        </ion-card-header>
+            
+                      
+                        <ion-item>
+                            <ion-icon name="bus" item-start large></ion-icon>
+                          <h2>Costly!</h2>
+                          <p>Ticket price is 4rs per 2km. </p>
+                        </ion-item>
+                      
+            
+                      
+                        <ion-item>
+                          <span item-left>8 min</span>
+                          <span item-left>(2.6 mi)</span>
+             
+                        </ion-item>
+                      
+                      </ion-card>
+
+                          <ion-card>
+                              
+                              <ion-card-header>
+                                  Cabs
+                                </ion-card-header>
+                    
+                              
+                                <ion-item>
+                                    <ion-icon name="car" item-start large></ion-icon>
+                                  <h2>cabs!</h2>
+                                  <p>Cab rates are 30rs per 4km </p>
+                                </ion-item>
+                              
+                    
+                              
+                                <ion-item>
+                                  <span item-left>5mins</span>
+                                  <span item-left>(2.6 mi)</span>
+                     
+                                </ion-item>
+                              
+                              </ion-card>
+              <ion-card-header>
+                  Choose Mode
+                </ion-card-header>
+              <ion-card-content>
+                  <ion-list radio-group>
+                     
+                    
+                      <ion-item>
+                        <ion-label>Cycle</ion-label>
+                        <ion-radio checked="true" value="cycle"></ion-radio>
+                      </ion-item>
+                    
+                      <ion-item>
+                        <ion-label>Driving</ion-label>
+                        <ion-radio value="drive"></ion-radio>
+                      </ion-item>
+                      <ion-item>
+                          <ion-label>Walk</ion-label>
+                          <ion-radio value="Walk"></ion-radio>
+                        </ion-item>
+                      <ion-item>
+                            <ion-label>Transist</ion-label>
+                            <ion-radio value="transist"></ion-radio>
+                      </ion-item>
+
+                    
+
+                    </ion-list>
+              </ion-card-content>
+        </ion-card>
+      <ion-card>
+          <ion-card-header>
+            News Feed
+          </ion-card-header>
+          <ion-card-content>
+              <ion-list>
+                  <ion-item>
+                   
+                    <h2>News 1</h2>
+                    <h3>18 Feb, T Nagar </h3>
+                    <p>Desc</p>
+                  </ion-item>
+                  <ion-item>
+                      
+                       <h2>News 2</h2>
+                       <h3>19 Feb, Guindy</h3>
+                       <p>Desc</p>
+                     </ion-item>
+                     <ion-item>
+                        
+                         <h2>News 3</h2>
+                         <h3>19 Feb, Guindy</h3>
+                         <p>Desc</p>
+                       </ion-item>
+                </ion-list>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-header>
+             Rating
+            </ion-card-header>
+            <ion-card-content>
+              <b>4.3</b> out of 5  |  129 users
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-content>
+      <button ion-button color="primary" (click)="back()">Back</button>
+      <button ion-button color="primary" (click)="back()">Start Trip</button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+
+      
+
